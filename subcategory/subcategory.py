@@ -112,6 +112,7 @@ def generate_subcategories(generator, writer):
         write(subcat.save_as, subcategory_template, generator.context, 
                 subcategory=subcat, articles=articles, dates=dates, 
                 template_name='subcategory', page_name=subcat.page_name,
+                paginated={'articles': articles, 'dates': dates},
                 all_articles=generator.articles)
 
 def generate_subcategory_feeds(generator, writer):
